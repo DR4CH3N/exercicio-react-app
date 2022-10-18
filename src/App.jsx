@@ -8,6 +8,7 @@ import ClassicRock from "./pages/ClassicRock";
 import HeavyMetal from "./pages/HeavyMetal";
 
 import "./App.css";
+import Menu from "./components/layout/Menu";
 
 function App() {
   return (
@@ -15,19 +16,20 @@ function App() {
       <BrowserRouter>
         <Cabecalho />
         <main className="borda-main">
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-          </Switch>
-
-          <Route path="/classicrock">
-            <ClassicRock />
-          </Route>
-
-          <Route path="/heavymetal">
-            <HeavyMetal />
-          </Route>
+          <Menu />
+          <div className="conteudo">
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/classicrock">
+                <ClassicRock />
+              </Route>
+              <Route path="/heavymetal">
+                <HeavyMetal />
+              </Route>
+            </Switch>
+          </div>
         </main>
         <Rodape />
       </BrowserRouter>

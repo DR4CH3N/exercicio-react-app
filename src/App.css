@@ -1,6 +1,8 @@
 body {
   background-color: salmon;
   font-family: sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 .destaque {
@@ -15,12 +17,26 @@ a {
 }
 
 .borda-main {
-  border-style: solid;
+  border: solid black 10px;
+  display: flex;
 }
 
 .borda-menu {
-  border-style: solid;
+  /* nav */
+  border-right: 10px;
+
   border-color: black;
+  border-style: solid;
   display: flex;
   flex-direction: column;
+  width: 40%;
+  background-color: lemonchiffon;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.conteudo {
+  width: 55%;
+  background-color: lavender;
+  align-items: center;
 }
